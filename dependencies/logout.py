@@ -21,8 +21,8 @@ def main():
                      passwd="control20101",  # tu password
                      db="control")
       cur = db.cursor();
-      hostName = socket.gethostname()
-      #hostName = "CrkJohn-80"
+      #hostName = socket.gethostname()
+      hostName = "linux-176"
       sql = "SELECT * FROM datos where datos.equipo = %s ORDER BY logon DESC LIMIT 1;"
       #sql = " INTO datos(estudiante,equipo,logon,logoff,ip) VALUES(%s,%s,now(),null,%s)"
       val = (hostName)
@@ -33,8 +33,9 @@ def main():
       now = datetime.datetime.now()
       x = str(logon)
       sql = "UPDATE datos set  logoff = now() where logon = '{}' and estudiante = '{}' and equipo= '{}';".format(x,estudiante,equipo)
+      #print(sql)
       val = (x,estudiante,equipo)
-      cur.execute(sql,val)
+      cur.execute(sql)
       db.commit()      
 
 main()
