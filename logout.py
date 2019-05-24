@@ -11,14 +11,18 @@ import getpass
       sudo apt install python3-mysqldb
       sudo apt-get install python3-pymysql
 """
+
+
+
+
 def main():      
       db = pymysql.connect(host="laboratorio.is.escuelaing.edu.co",    # tu host, usualmente localhost
                      user="control",         # tu usuario
                      passwd="control20101",  # tu password
                      db="control")
       cur = db.cursor();
-      #hostName = socket.gethostname()
-      hostName = "CrkJohn-80"
+      hostName = socket.gethostname()
+      #hostName = "CrkJohn-80"
       sql = "SELECT * FROM datos where datos.equipo = %s ORDER BY logon DESC LIMIT 1;"
       #sql = " INTO datos(estudiante,equipo,logon,logoff,ip) VALUES(%s,%s,now(),null,%s)"
       val = (hostName)
