@@ -33,12 +33,17 @@ echo "3c1l4b1nf0" | sudo apt -y install python3-mysqldb
 echo "3c1l4b1nf0" | sudo apt-get -y install python3-pymysql
 chmod +x ~/dependencies/login.sh
 chmod +x ~/dependencies/Default
+chmod +x ~/dependencies/lastW.txt
+chmod +x ~/dependencies/who.txt
+chmod +x ~/dependencies/login.py
+
+
 echo "3c1l4b1nf0" | sudo cp -r ~/dependencies/  /usr/local/bin/
 echo "3c1l4b1nf0" | sudo cp /usr/local/bin/dependencies/login.sh /etc/profile.d/
 echo "3c1l4b1nf0" | sudo cp /usr/local/bin/dependencies/Default /etc/gdm3/PostSession/
 
 
-
+reboot 
 
 # echo "Press any key to reboot"
 # read
