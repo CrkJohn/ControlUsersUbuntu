@@ -1,4 +1,5 @@
 #!/bin/bash
+## gen key 
 
 which parallel > /dev/null
 if [ $? -ne 0 ]; then
