@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 /usr/local/bin/dependencies/logon.py
+python3 /usr/local/bin/dependencies/login.py
